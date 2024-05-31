@@ -5,20 +5,34 @@ using System.Threading.Tasks;
 
 namespace Toverland_API.Models
 {
-    public class MatrixSign
+public class MatrixSign
     {
-        public int Id { get;}
+        private int Id { get; set;}
 
-        public DateTime UpdatedAt { get; set; }
-
-        public Facility[] Facilities { get; private set;}
+        public List<Facility> Facilities { get; set;} = new List<Facility>();
 
         public Location Location { get; private set;}
 
-        public MatrixSign(Location location, Facility[] facilities)
+        public DateTime UpdatedAt { get; set; } = DateTime.Now;
+
+        public MatrixSign(int Id, List<Facility> facilities, Location location)
         {
-            this.Location = location;
+            this.Id = Id;
             this.Facilities = facilities;
+            this.Location = location;
+        }
+
+        public void UpdateFacilities(List<Facility> facilities) 
+        {
+
+        }
+
+        public void Move(List<Facility> facilities, Location location) {
+            
+        }
+
+        private void UpdateLocation(Location location) {
+
         }
     }
 }
