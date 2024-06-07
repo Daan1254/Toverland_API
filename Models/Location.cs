@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-public enum Direction {
+public enum CordinalDirection {
     NORTH,
     NORTH_EAST,
     EAST,
@@ -16,18 +16,27 @@ public enum Direction {
 
 namespace Toverland_API.Models
 {
-    public class Location
+public class Location
     {
-        public int Id { get; }
+        private int Id { get; set; }
 
-        public decimal latitude  { get; set; }
+        public decimal Latitude  { get; set; }
 
-        public decimal longitude { get; set; }
+        public decimal Longitude { get; set; }
 
-        public Direction Direction { get; set; }
+        public CordinalDirection Direction { get; set; }
 
-        public Location()
+        public Location(int Id)
         {
+            this.Id = Id;
+        }
+
+
+        public void NavigateTo() {
+
+        }
+
+        public void SetDirection(CordinalDirection direction) {
             
         }
     }
