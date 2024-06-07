@@ -14,7 +14,7 @@ namespace Toverland_API.Models
 {
     public class Account
     {
-        private int Id { get; set; }
+        public int Id { get; set; }
 
         public string FirstName { get; private set; } = string.Empty;
 

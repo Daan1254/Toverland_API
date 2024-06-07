@@ -16,9 +16,9 @@ namespace Toverland_API.Data
         }   
 
         public DbSet<Account> Account { get; set; }
-        public DbSet<Facility> Facility { get; set; }
-        public DbSet<Location> Location { get; set; }
-        public DbSet<MatrixSign> MatrixSign { get; set; }
+        // public DbSet<Facility> Facility { get; set; }
+        // public DbSet<Location> Location { get; set; }
+        // public DbSet<MatrixSign> MatrixSign { get; set; }
 
 
     }
